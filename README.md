@@ -4,7 +4,7 @@ Project Euler Codes
 
 ## Description
 
-This repository contains all the codes (not passing all the test cases) that I've tried to implement for Project Euler. 
+This repository contains all the codes (not passing all the test cases) that I've tried to implement for Project Euler
 
 ## Getting Started
 
@@ -14,11 +14,13 @@ Use windows 10 or above and python 3 or above
 
 ### Installing
 
-NA
+Basic packages and libraries of python are required which are already there in your system (I know I'm assuming it)
 
 ### Executing program
 
-NA
+Just run the Python script (".py" files) in terminal from the command line, 
+Command:
+py script_name.py
 
 ## Help
 
@@ -37,4 +39,4 @@ Always use the code from the latest commit
 NA
 
 ## Acknowledgments
-I'll update this.
+I'll update this
