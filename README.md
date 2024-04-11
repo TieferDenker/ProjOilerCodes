@@ -4,7 +4,11 @@ Project Euler Codes
 
 ## Description
 
-This repository contains all the codes (not passing all the test cases) that I've tried to implement for Project Euler
+This repository contains all the codes that I've tried to implement for Project Euler.
+Note: The above codes can be divided into the following three categories:
+Correct (Passing all the test cases)                    : 1,4,5,6,7
+Partially correct (Passing almost all of the test cases): 2,10
+Incorrect (Passing almost no test cases)                : 3,8,9
 
 ## Getting Started
 
@@ -14,17 +18,16 @@ Use windows 10 or above and python 3 or above
 
 ### Installing
 
-Basic packages and libraries of python are required which are already there in your system (I know I'm assuming it)
+Basic packages and libraries of python are required which I assume are already there in your system
 
 ### Executing program
 
-Just run the Python script (".py" files) in terminal from the command line, 
-Command:
+Just run the code (which is basically a Python script (".py" files)) in the terminal from the command line using the command, 
 py script_name.py
 
 ## Help
 
-The problems are left to the coders as an exercise!
+Feel free to contact me in case you face any problem while running the code or if you get a better solution (which I'm sure you surely will). The problems which I'm not able to solve are left to the coders as an exercise!
 
 ## Authors
 
@@ -32,11 +35,11 @@ Angad Singh
 
 ## Version History
 
-Always use the code from the latest commit
+Always use the code from the latest commit of the branch "Project-Euler-Codes"
 
 ## License
 
 NA
 
 ## Acknowledgments
-I'll update this
+1. Number Theory by George E. Andrews, Dover Publications
