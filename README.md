@@ -6,8 +6,8 @@ Project Euler Codes
 
 This repository contains all the codes that I've tried to implement for Project Euler.
 Note: The above codes can be divided into the following three categories:
-Correct (Passing all the test cases)                    : 1,4,5,6,7
-Partially correct (Passing almost all of the test cases): 2,10
+Correct (Passing all the test cases)                    : 1,4,5,6,7__
+Partially correct (Passing almost all of the test cases): 2,10__
 Incorrect (Passing almost no test cases)                : 3,8,9
 
 ## Getting Started
