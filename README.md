@@ -4,7 +4,7 @@ Project Euler Codes
 
 ## Description
 
-This repository contains all the codes which I like!!!
+This repository contains all the Project Euler codes which I like!!!
 
 ## Getting Started
 
