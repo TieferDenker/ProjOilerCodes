@@ -32,26 +32,11 @@ def is_prime(n, k=5):
     return True
 
 def Solve_Prob(n):
-    if n == 1:
-        answer = 0
-    elif n == 2:
-        answer = 2
-    else:
-        left, right = 0, len(PRIMES) - 1
-        index = None
-        
-        while left <= right:
-            mid = (left + right) // 2
-            
-            if PRIMES[mid] <= n:
-                index = mid
-                left = mid + 1
-            else:
-                right = mid - 1
-
-        answer = 0
-        for i in range(0,index+1):
-            answer = answer + PRIMES[i]
+    i = 0
+    answer = 0
+    while PRIMES[i] <= n:
+        answer = answer + PRIMES[i]
+        i = i + 1
     return answer
 
 N = int(10E5)
