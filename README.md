@@ -8,7 +8,7 @@ This repository contains all the codes that I've tried to implement for Project 
 Note: The above codes can be divided into the following three categories:  
 Correct (Passing all the test cases)                    : 1,2,4,5,6,7,12,13,15,16,20,28,30,34,35  
 Partially correct (Passing almost all of the test cases): 10,21,25  
-Incorrect (Passing almost no test cases)                : 3,8,9
+Incorrect (Passing almost no test cases)                : 3,8,9,36
 
 ## Getting Started
 
