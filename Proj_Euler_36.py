@@ -5,6 +5,14 @@ def IsPalin(n):
             return False
     return True
 
+def ConvBase(n,k):
+    st = ""
+    while not(n == 0):
+        st = st + str(n%k)
+        n = n//k
+    st = "".join(reversed(st))
+    return int(st)
+
 def IsPalinWithBase(n,k):
     if IsPalin(n):
         m = ConvBase(n,k)
@@ -23,6 +31,6 @@ def Solve_Prob(n,k):
 # t = int(input())
 t = 1
 for i in range(0,t):
-    n = int(input())
-    answer = Solve_Prob(n)
+    n,k = map(int, input().split())
+    answer = Solve_Prob(n,k)
     print(answer)
