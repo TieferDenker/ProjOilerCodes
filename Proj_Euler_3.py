@@ -7,7 +7,7 @@ sq5 = 2.2360679774997896964091736687312762354406183596115257242708972454
 # Small primes for deterministic primality testing
 SMALL_PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 
-def is_prime(n, k=40):
+def is_prime(n, k=5):
     if n in SMALL_PRIMES:
         return True
     if n <= 1 or n % 2 == 0:
@@ -38,10 +38,11 @@ def Max_Pri(n):
     m = n
     for i in range (3,int(sqrt(n))+1,2):
         while(n%i == 0):
-            n = n/i
-            sprime = i
-    bprime = int(m//sprime)
-    return bprime
+            n = n//i
+            sprime = max(sprime,i)
+    if n>2:
+        sprime = max(sprime,n)
+    return sprime
 
 def Solve_Prob(n):
     if is_prime(n):
@@ -50,7 +51,7 @@ def Solve_Prob(n):
         if n%2 == 0:
             expo = 0
             while(n%2 == 0):
-                n = n/2
+                n = n//2
                 expo = expo + 1
             # print(expo)
             if (n == 1):
