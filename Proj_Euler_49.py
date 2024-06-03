@@ -42,14 +42,14 @@ def permute(a, l, r):
         for i in range(l, r): 
             a[l], a[i] = a[i], a[l] 
             permute(a, l+1, r) 
-            a[l], a[i] = a[i], a[l] # backtrack
+            a[l], a[i] = a[i], a[l]
     return Permuations 
 
 def IsPrimeAP(n,k):
     global Permuations
     flag = False
     Permuations = []
-    ansdiff = 0
+    ansdiff = []
 
     string = str(n)
     l = len(string) 
@@ -65,30 +65,47 @@ def IsPrimeAP(n,k):
             PrimeUniqPer.append(i)
     # print(PrimeUniqPer)
 
-    for i in range(0,len(PrimeUniqPer)):
-        x = PrimeUniqPer[i]-n
-        if (x>0) and ((n+2*x) in PrimeUniqPer):
-            flag = True
-            ansdiff = x
+    if k == 3:
+        for i in range(0,len(PrimeUniqPer)):
+            x = PrimeUniqPer[i]-n
+            if (x>0) and ((n+2*x) in PrimeUniqPer):
+                flag = True
+                ansdiff.append(x)
+    else:
+        for i in range(0,len(PrimeUniqPer)):
+            x = PrimeUniqPer[i]-n
+            if (x>0) and ((n+2*x) in PrimeUniqPer) and ((n+3*x) in PrimeUniqPer):
+                flag = True
+                ansdiff.append(x)
 
     # print(n,flag,ansdiff)
     return flag,ansdiff
 
-N = 1000000
-N = 2000
+# N = 1000000
 def Solve_Prob(n,k):
     A = []
     D = []
-    for i in range(1000,N+1):
+    answer = ""
+
+    for i in range(1000,n):
         if is_prime(i):
             flag,diff = IsPrimeAP(i,k)
             if flag:
-                A.append(i)
-                D.append(diff)
-    print(A)
-    print(D)
+                for j in range(0,len(diff)):
+                    A.append(i)
+                    D.append(diff[j])
+    # print(A)
+    # print(D)
 
-    # return answer
+    for i in range(0,len(A)):
+        answer = ""
+        a = A[i]
+        d = D[i]
+        for j in range(0,k):
+            x = str(a+j*d)
+            answer = answer + x
+        print(answer)  
+    return answer
 
 # t = int(input())
 t = 1
@@ -97,5 +114,3 @@ for i in range(0,t):
     # n = int(input())
     answer = Solve_Prob(n,k)
     # print(answer)
-
-# IsPrimeAP(1487,3)
