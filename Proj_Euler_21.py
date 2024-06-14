@@ -1,24 +1,43 @@
-AMINUM = [220,284,1184,1210,2620,2924,5020,5564,6232,6368,10744,10856,12285,14595,17296,18416,63020,66928,66992,67095,69615,71145,76084,79750,87633,88730]   
-AMISUM = [-1]
+Ami = []
 
-def GenSumAmi(n):
-    global AMINUM
-    global AMISUM
-    summ = 0
+def is_ami(n):
+    count = 1
+    counts = 1
+    for i in range(2,int(n**0.5)+1):
+        if n%i == 0:
+            count = count + i + n//i
+    if not(count == n):
+        for i in range(2,int(count**0.5)+1):
+            if count%i == 0:
+                counts = counts + i + count//i
+        if n == counts:
+            return True
+        else:
+            return False
+    else:
+        return False 
+
+def GenAmi(n):
     for i in range(1,n):
-        if i in AMINUM:
-            summ = summ + i
-        AMISUM.append(summ)
+        if is_ami(i):
+            Ami.append(i)
 
 def Solve_Prob(n):
-    answer =  AMISUM[n]
+    summ = 0
+    for i in Ami:
+        if i < n:
+            summ = summ + i
+    answer = summ
     return answer
 
-N = int(10E4)
-GenSumAmi(N)
-
 t = int(input())
+inputs = []
 for i in range(0,t):
     n = int(input())
-    answer = Solve_Prob(n)
+    inputs.append(n)
+
+GenAmi(max(inputs))
+
+for i in inputs:
+    answer = Solve_Prob(i)
     print(answer)
